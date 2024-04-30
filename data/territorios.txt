@@ -1,0 +1,47 @@
+Alaska - Alberta - Territorios del Noroeste
+Alberta - Alaska - Territorios del Noroeste - Ontario - Estados Unidos del Oeste
+América Central - Estados Unidos del Oeste - Estados Unidos del Este - Venezuela
+Estados Unidos del Este - Ontario - Quebec - América Central - Estados Unidos del Oeste
+Groenlandia - Territorios del Noroeste - Ontario - Quebec - Islandia
+Territorios del Noroeste - Alaska - Alberta - Groenlandia - Ontario
+Ontario - Alberta - Estados Unidos del Este - Groenlandia - Territorios del Noroeste - Quebec - Estados Unidos del Oeste
+Quebec - Estados Unidos del Este - Groenlandia - Ontario
+Estados Unidos del Oeste - Alberta - América Central - Estados Unidos del Este - Ontario
+
+Argentina - Brasil - Perú
+Brasil - Argentina - Perú - Venezuela - África del Norte
+Perú - Argentina - Brasil - Venezuela
+Venezuela - Brasil - Perú - América Central
+
+Congo - África Oriental - África del Norte - Sudáfrica
+África Oriental - Congo - Egipto - Madagascar - África del Norte - Sudáfrica
+Egipto - África Oriental - África del Norte - Europa del Sur - Oriente Medio
+Madagascar - África Oriental - Sudáfrica
+África del Norte - Congo - Egipto - Brasil -  Europa Occidental
+Sudáfrica - Congo - África Oriental - Madagascar
+
+Gran Bretaña - Islandia - Europa del Norte -Escandinavia - Europa del Sur
+Islandia - Gran Bretaña - Escandinavia - Groenlandia
+Europa del Norte - Gran Bretaña - Escandinavia - Europa del Sur - Rusia
+Escandinavia - Gran Bretaña - Islandia - Europa del Norte -Rusia
+Europa del Sur - Europa del Norte - Rusia - Europa Occidental - Egipto - África del Norte - Oriente Medio
+Rusia - Europa del Norte - Escandinavia - Europa del Sur - Afganistán - Oriente Medio - Ural
+Europa Occidental - Gran Bretaña - Europa del Norte - Europa del Sur - África del Norte
+
+Afganistán - China - India - Oriente Medio - Ural - Rusia
+China - Afganistán - India - Mongolia - Sudeste Asiático - Siberia - Ural
+India - Afganistán - China - Oriente Medio - Sudeste Asiático
+Irkutsk - Kamchatka - Mongolia - Siberia - Yakutsk
+Japón - Kamchatka - Mongolia
+Kamchatka - Irkutsk - Japón - Mongolia - Yakutsk - Alaska
+Oriente Medio - Afganistán - India - Europa del Sur - Rusia - Egipto
+Mongolia - China - Irkutsk - Japón - Kamchatka - Siberia
+Sudeste Asiático - China - India - Indonesia
+Siberia - China - Irkutsk - Mongolia - Ural - Yakutsk
+Ural - Afganistán - China - Siberia - Rusia
+Yakutsk - Irkutsk - Kamchatka - Siberia
+
+Australia Oriental - Nueva Guinea - Australia Occidental
+Indonesia - Nueva Guinea - Australia Occidental - Sudeste Asiático
+Nueva Guinea - Australia Oriental - Indonesia
+Australia Occidental - Australia Oriental - Indonesia - Nueva Guinea

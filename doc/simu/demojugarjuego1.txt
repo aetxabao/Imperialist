@@ -1,0 +1,74 @@
+********************************************************************************************************
+*                                         I M P E R I A L I S T                                        *
+********************************************************************************************************
+
+Empieza el jugador 2 Alba
+
+
+Ejercitos colocados, pendientes de colocar 0
+
+Ejercitos colocados, pendientes de colocar 0
+
+Ejercitos colocados, pendientes de colocar 0
+
+Alba decide que territorio quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+0. Finalizar
+Opción: 2
+
+Afganistán L(3) [China T(3), India T(2), Oriente Medio D(2), Ural T(2), Rusia L(2)]
+Alaska D(3) [Alberta T(3), Territorios del Noroeste L(2)]
+Alberta T(3) [Alaska D(3), Territorios del Noroeste L(2), Ontario L(2), Estados Unidos del Oeste T(2)]
+América Central L(3) [Estados Unidos del Oeste T(2), Estados Unidos del Este T(3), Venezuela D(2)]
+Argentina L(3) [Brasil T(3), Perú D(2)]
+Australia Occidental T(3) [Australia Oriental D(3), Indonesia L(3), Nueva Guinea L(2)]
+Australia Oriental D(3) [Nueva Guinea L(2), Australia Occidental T(3)]
+Brasil T(3) [Argentina L(3), Perú D(2), Venezuela D(2), África del Norte L(2)]
+China T(3) [Afganistán L(3), India T(2), Mongolia T(2), Sudeste Asiático D(2), Siberia D(2), Ural T(2)]
+Congo D(3) [África Oriental D(2), África del Norte L(2), Sudáfrica D(2)]
+Egipto T(3) [África Oriental D(2), África del Norte L(2), Europa del Sur L(3), Oriente Medio D(2)]
+Escandinavia T(3) [Gran Bretaña T(2), Islandia L(3), Europa del Norte T(2), Rusia L(2)]
+Estados Unidos del Este T(3) [Ontario L(2), Quebec L(2), América Central L(3), Estados Unidos del Oeste T(2)]
+Estados Unidos del Oeste T(2) [Alberta T(3), América Central L(3), Estados Unidos del Este T(3), Ontario L(2)]
+Europa Occidental T(2) [Gran Bretaña T(2), Europa del Norte T(2), Europa del Sur L(3), África del Norte L(2)]
+Europa del Norte T(2) [Gran Bretaña T(2), Escandinavia T(3), Europa del Sur L(3), Rusia L(2)]
+Europa del Sur L(3) [Europa del Norte T(2), Rusia L(2), Europa Occidental T(2), Egipto T(3), África del Norte L(2), Oriente Medio D(2)]
+Gran Bretaña T(2) [Islandia L(3), Europa del Norte T(2), Escandinavia T(3), Europa del Sur L(3)]
+Groenlandia D(3) [Territorios del Noroeste L(2), Ontario L(2), Quebec L(2), Islandia L(3)]
+India T(2) [Afganistán L(3), China T(3), Oriente Medio D(2), Sudeste Asiático D(2)]
+Indonesia L(3) [Nueva Guinea L(2), Australia Occidental T(3), Sudeste Asiático D(2)]
+Irkutsk D(3) [Kamchatka D(3), Mongolia T(2), Siberia D(2), Yakutsk L(2)]
+Islandia L(3) [Gran Bretaña T(2), Escandinavia T(3), Groenlandia D(3)]
+Japón D(3) [Kamchatka D(3), Mongolia T(2)]
+Kamchatka D(3) [Irkutsk D(3), Japón D(3), Mongolia T(2), Yakutsk L(2), Alaska D(3)]
+Madagascar L(3) [África Oriental D(2), Sudáfrica D(2)]
+Mongolia T(2) [China T(3), Irkutsk D(3), Japón D(3), Kamchatka D(3), Siberia D(2)]
+Nueva Guinea L(2) [Australia Oriental D(3), Indonesia L(3)]
+Ontario L(2) [Alberta T(3), Estados Unidos del Este T(3), Groenlandia D(3), Territorios del Noroeste L(2), Quebec L(2), Estados Unidos del Oeste T(2)]
+Oriente Medio D(2) [Afganistán L(3), India T(2), Europa del Sur L(3), Rusia L(2), Egipto T(3)]
+Perú D(2) [Argentina L(3), Brasil T(3), Venezuela D(2)]
+Quebec L(2) [Estados Unidos del Este T(3), Groenlandia D(3), Ontario L(2)]
+Rusia L(2) [Europa del Norte T(2), Escandinavia T(3), Europa del Sur L(3), Afganistán L(3), Oriente Medio D(2), Ural T(2)]
+Siberia D(2) [China T(3), Irkutsk D(3), Mongolia T(2), Ural T(2), Yakutsk L(2)]
+Sudeste Asiático D(2) [China T(3), India T(2), Indonesia L(3)]
+Sudáfrica D(2) [Congo D(3), África Oriental D(2), Madagascar L(3)]
+Territorios del Noroeste L(2) [Alaska D(3), Alberta T(3), Groenlandia D(3), Ontario L(2)]
+Ural T(2) [Afganistán L(3), China T(3), Siberia D(2), Rusia L(2)]
+Venezuela D(2) [Brasil T(3), Perú D(2), América Central L(3)]
+Yakutsk L(2) [Irkutsk D(3), Kamchatka D(3), Siberia D(2)]
+África Oriental D(2) [Congo D(3), Egipto T(3), Madagascar L(3), África del Norte L(2), Sudáfrica D(2)]
+África del Norte L(2) [Congo D(3), Egipto T(3), Brasil T(3), Europa Occidental T(2)]
+
+Alba decide que territorio quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+0. Finalizar
+Opción: 0
+
+Desea terminar la partida en curso [N]o/[s]í: s
+********************************************************************************************************
+*                                     MAKE LOVE, NOT WAR. BYE, BYE!                                    *
+********************************************************************************************************

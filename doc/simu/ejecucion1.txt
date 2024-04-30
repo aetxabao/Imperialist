@@ -1,0 +1,194 @@
+********************************************************************************************************
+*                                         I M P E R I A L I S T                                        *
+********************************************************************************************************
+
+Cuántos jugadores hay (2-6): 3
+
+Nombre del jugador 1: Aitor
+Identificador del jugador 1: T
+
+Nombre del jugador 2: Alba
+Identificador del jugador 2: L
+
+Nombre del jugador 3: Edu
+Identificador del jugador 3: D
+
+Empieza el jugador 1 Aitor
+
+Aitor debes colocar tus ejercitos, al menos 1 en cada territorio y 35 en total.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Modificar el número de ejercitos en uno de mis territorios
+4. Repartir ejercitos pendientes entre mis territorios uniformemente
+0. Finalizar
+Opción: 4
+
+
+Ejercitos colocados, pendientes de colocar 0
+Aitor debes colocar tus ejercitos, al menos 1 en cada territorio y 35 en total.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Modificar el número de ejercitos en uno de mis territorios
+4. Repartir ejercitos pendientes entre mis territorios uniformemente
+0. Finalizar
+Opción: 0
+
+Los ejércitos están colocados.
+
+Alba debes colocar tus ejercitos, al menos 1 en cada territorio y 35 en total.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Modificar el número de ejercitos en uno de mis territorios
+4. Repartir ejercitos pendientes entre mis territorios uniformemente
+0. Finalizar
+Opción: 4
+
+
+Ejercitos colocados, pendientes de colocar 0
+Alba debes colocar tus ejercitos, al menos 1 en cada territorio y 35 en total.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Modificar el número de ejercitos en uno de mis territorios
+4. Repartir ejercitos pendientes entre mis territorios uniformemente
+0. Finalizar
+Opción: 0
+
+Los ejércitos están colocados.
+
+Edu debes colocar tus ejercitos, al menos 1 en cada territorio y 35 en total.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Modificar el número de ejercitos en uno de mis territorios
+4. Repartir ejercitos pendientes entre mis territorios uniformemente
+0. Finalizar
+Opción: 4
+
+
+Ejercitos colocados, pendientes de colocar 0
+Edu debes colocar tus ejercitos, al menos 1 en cada territorio y 35 en total.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Modificar el número de ejercitos en uno de mis territorios
+4. Repartir ejercitos pendientes entre mis territorios uniformemente
+0. Finalizar
+Opción: 0
+
+Los ejércitos están colocados.
+
+Aitor decide que territorio quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+0. Finalizar
+Opción: 1
+
+Alaska T(3) [Alberta L(3), Territorios del Noroeste D(2)]
+América Central T(3) [Estados Unidos del Oeste T(3), Estados Unidos del Este L(3), Venezuela L(2)]
+Brasil T(3) [Argentina D(3), Perú T(2), Venezuela L(2), África del Norte T(2)]
+Estados Unidos del Oeste T(3) [Alberta L(3), América Central T(3), Estados Unidos del Este L(3), Ontario L(2)]
+Groenlandia T(3) [Territorios del Noroeste D(2), Ontario L(2), Quebec D(2), Islandia D(2)]
+India T(3) [Afganistán L(3), China D(3), Oriente Medio L(2), Sudeste Asiático D(2)]
+Irkutsk T(3) [Kamchatka D(2), Mongolia L(2), Siberia L(2), Yakutsk D(2)]
+Nueva Guinea T(2) [Australia Oriental L(3), Indonesia L(3)]
+Perú T(2) [Argentina D(3), Brasil T(3), Venezuela L(2)]
+Rusia T(2) [Europa del Norte D(3), Escandinavia D(3), Europa del Sur D(3), Afganistán L(3), Oriente Medio L(2), Ural T(2)]
+Sudáfrica T(2) [Congo L(3), África Oriental T(2), Madagascar L(2)]
+Ural T(2) [Afganistán L(3), China D(3), Siberia L(2), Rusia T(2)]
+África Oriental T(2) [Congo L(3), Egipto D(3), Madagascar L(2), África del Norte T(2), Sudáfrica T(2)]
+África del Norte T(2) [Congo L(3), Egipto D(3), Brasil T(3), Europa Occidental D(3)]
+
+Aitor decide que territorio quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+0. Finalizar
+Opción: 3
+
+Desde qué territorio atacas:      Ural
+A qué territorio vas a atacar:    Rusia
+No puedes atacar a tus territorios.
+
+Aitor decide que territorio quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+0. Finalizar
+Opción: 3
+
+Desde qué territorio atacas:      Ural
+A qué territorio vas a atacar:    Txina
+No se reconoce ese territorio como vecino.
+
+Aitor decide que territorio quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+0. Finalizar
+Opción: 3
+
+Desde qué territorio atacas:      Ural
+A qué territorio vas a atacar:    China
+Aitor      [6, 4]             --> pierde 0 ejercito(s) de Ural, quedan 2
+Edu        [4, 1]             --> pierde 2 ejercito(s) de China, quedan 1
+Aitor      [3, 2]             --> pierde 1 ejercito(s) de Ural, quedan 1
+Edu        [4]                --> pierde 0 ejercito(s) de China, quedan 1
+Aitor      [3]                --> pierde 0 ejercito(s) de Ural, quedan 1
+Edu        [1]                --> pierde 1 ejercito(s) de China, quedan 0
+Aitor ha conseguido ganar Ural perdiendo 1 ejercito(s)
+Edu no ha conseguido ganar, ha perdido el territorio de China y 3 ejercito(s)
+
+Ural T(1) [Afganistán L(3), China T(1), Siberia L(2), Rusia T(2)]
+China T(1) [Afganistán L(3), India T(3), Mongolia L(2), Sudeste Asiático D(2), Siberia L(2), Ural T(1)]
+
+Alba decide que territorio quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+0. Finalizar
+Opción: 1
+
+Afganistán L(3) [China T(1), India T(3), Oriente Medio L(2), Ural T(1), Rusia T(2)]
+Alberta L(3) [Alaska T(3), Territorios del Noroeste D(2), Ontario L(2), Estados Unidos del Oeste T(3)]
+Australia Occidental L(3) [Australia Oriental L(3), Indonesia L(3), Nueva Guinea T(2)]
+Australia Oriental L(3) [Nueva Guinea T(2), Australia Occidental L(3)]
+Congo L(3) [África Oriental T(2), África del Norte T(2), Sudáfrica T(2)]
+Estados Unidos del Este L(3) [Ontario L(2), Quebec D(2), América Central T(3), Estados Unidos del Oeste T(3)]
+Indonesia L(3) [Nueva Guinea T(2), Australia Occidental L(3), Sudeste Asiático D(2)]
+Japón L(2) [Kamchatka D(2), Mongolia L(2)]
+Madagascar L(2) [África Oriental T(2), Sudáfrica T(2)]
+Mongolia L(2) [China T(1), Irkutsk T(3), Japón L(2), Kamchatka D(2), Siberia L(2)]
+Ontario L(2) [Alberta L(3), Estados Unidos del Este L(3), Groenlandia T(3), Territorios del Noroeste D(2), Quebec D(2), Estados Unidos del Oeste T(3)]
+Oriente Medio L(2) [Afganistán L(3), India T(3), Europa del Sur D(3), Rusia T(2), Egipto D(3)]
+Siberia L(2) [China T(1), Irkutsk T(3), Mongolia L(2), Ural T(1), Yakutsk D(2)]
+Venezuela L(2) [Brasil T(3), Perú T(2), América Central T(3)]
+
+Alba decide que territorio quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+0. Finalizar
+Opción: 3
+
+Desde qué territorio atacas:      Alberta
+A qué territorio vas a atacar:    Alaska
+Alba       [5, 3, 2]          --> pierde 2 ejercito(s) de Alberta, quedan 1
+Aitor      [6, 3]             --> pierde 0 ejercito(s) de Alaska, quedan 3
+Alba       [3]                --> pierde 1 ejercito(s) de Alberta, quedan 0
+Aitor      [5, 2]             --> pierde 0 ejercito(s) de Alaska, quedan 3
+Alba no ha conseguido ganar, ha perdido el territorio de Alberta y 3 ejercito(s)
+Aitor ha conseguido ganar Alberta perdiendo 0 ejercito(s)
+
+Alberta T(1) [Alaska T(2), Territorios del Noroeste D(2), Ontario L(2), Estados Unidos del Oeste T(3)]
+Alaska T(2) [Alberta T(1), Territorios del Noroeste D(2)]
+
+Edu decide que territorio quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+0. Finalizar
+Opción: 0
+
+Desea terminar la partida en curso [N]o/[s]í: s
+********************************************************************************************************
+*                                     MAKE LOVE, NOT WAR. BYE, BYE!                                    *
+********************************************************************************************************
