@@ -136,15 +136,16 @@ class com.masanz.imperia.modelo.Territorio {
 + String toString()
 }
 
-
 com.masanz.imperia.Main ..> com.masanz.imperia.terminal.Main
 com.masanz.imperia.terminal.Main ..> com.masanz.imperia.terminal.Juego
-com.masanz.imperia.terminal.Gui ..> com.masanz.imperia.modelo.Jugador
 com.masanz.imperia.terminal.Gui ..> com.masanz.imperia.modelo.Mundo
-com.masanz.imperia.terminal.Gui ..> com.masanz.imperia.modelo.Territorio
 com.masanz.imperia.terminal.Juego *-> com.masanz.imperia.modelo.Jugador
 com.masanz.imperia.terminal.Juego ..> com.masanz.imperia.terminal.Gui
-com.masanz.imperia.terminal.Juego ..> com.masanz.imperia.modelo
+com.masanz.imperia.terminal.Juego ..> com.masanz.imperia.modelo.Mundo
+com.masanz.imperia.terminal.Juego ..> com.masanz.imperia.modelo.Tirada
+com.masanz.imperia.terminal.Juego ..> com.masanz.imperia.modelo.DosValores
 com.masanz.imperia.modelo.Mundo *-> com.masanz.imperia.modelo.Territorio
 com.masanz.imperia.modelo.Tirada --> com.masanz.imperia.modelo.Dado
+com.masanz.imperia.modelo.Territorio --> com.masanz.imperia.modelo.Jugador
+
 @enduml

@@ -6,6 +6,7 @@ class com.masanz.imperia.modelo.DosValores {
 
 
 class com.masanz.imperia.terminal.Juego {
+- MazoTarjetas mazoTarjetas
 # List<Jugador> jugadores
 # int turno
 }
@@ -19,6 +20,7 @@ class com.masanz.imperia.modelo.Tirada {
 
 class com.masanz.imperia.modelo.Mundo {
 - {static} TreeMap<String,Territorio> mapaTerritorios
+- {static} TreeMap<String,List<Territorio>> mapaContinentes
 }
 
 class com.masanz.imperia.terminal.Gui {
@@ -43,6 +45,7 @@ class com.masanz.imperia.modelo.Dado {
 class com.masanz.imperia.modelo.Jugador {
 - String id
 - String nombre
+- MazoTarjetas mazoTarjetas
 }
 
 
@@ -51,6 +54,16 @@ class com.masanz.imperia.modelo.Territorio {
 - List<String> vecinos
 - Jugador jugador
 - int ejercitos
+}
+
+class com.masanz.imperia.modelo.MazoTarjetas {
+- List<Tarjeta> lista
+}
+
+class com.masanz.imperia.modelo.Tarjeta {
+- {static} int contador;
+- int numero;
+- String tipo
 }
 
 com.masanz.imperia.Main ..> com.masanz.imperia.terminal.Main
@@ -64,5 +77,9 @@ com.masanz.imperia.terminal.Juego ..> com.masanz.imperia.modelo.DosValores
 com.masanz.imperia.modelo.Mundo *-> com.masanz.imperia.modelo.Territorio
 com.masanz.imperia.modelo.Tirada --> com.masanz.imperia.modelo.Dado
 com.masanz.imperia.modelo.Territorio --> com.masanz.imperia.modelo.Jugador
+
+com.masanz.imperia.modelo.MazoTarjetas *-> com.masanz.imperia.modelo.Tarjeta
+com.masanz.imperia.modelo.Jugador --> com.masanz.imperia.modelo.MazoTarjetas
+com.masanz.imperia.terminal.Juego *-> com.masanz.imperia.modelo.MazoTarjetas
 
 @enduml

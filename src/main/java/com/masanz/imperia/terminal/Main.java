@@ -9,7 +9,7 @@ public class Main {
         juego.repartirTerritorios();
         juego.colocarEjercitos();
 
-        juego.jugarJuego();
+        juego.jugar();
     }
 
 }

@@ -8,15 +8,29 @@ import java.util.List;
 import java.util.TreeMap;
 
 /**
- * Clase que representa el mapa de juego que consta de territorios
+ * Clase que representa el mapa de juego que consta de territorios de diferentes continentes.
+ * @author TODO: 20 AQUÍ_TU_NOMBRE
  */
 public class Mundo {
 
     // region Atributos
     private static TreeMap<String, Territorio> mapaTerritorios = new TreeMap<>();
+    // Definición del mapa de continentes.
+    private static TreeMap<String, List<Territorio>> mapaContinentes = new TreeMap<>();
     // endregion
 
+    /**
+     * Carga los mapas de los territorios y los continentes.
+     * Los territorios se cargan desde el fichero "territorios.txt" que se encuentra en la carpeta "data".
+     * Observar la estructura de este fichero. Las líneas que comienzan con "#" indican el nombre de un continente.
+     * Las líneas que no comienzan con "#" indican un territorio y sus vecinos.
+     * Los territorios corresponden al continente que se haya indicado en la última línea que comienza con "#".
+     */
     public static void loadWorld() {
+        // TODO: 21 Cargar los mapas de territorios (hecho) y de continentes (por hacer).
+        String continente = null;
+        List<Territorio> territoriosContinente = null;
+
         String line;
         //PATH_TERRITORIOS = "data" + FileSystems.getDefault().getSeparator() + "territorios.txt";
         File file = new File(Ctes.PATH_TERRITORIOS);
@@ -24,12 +38,23 @@ public class Mundo {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             while ( (line = reader.readLine()) != null ) {
                 if (line.isEmpty()) { continue; }
+
+
+
+
+
+
+
+
                 String[] a = line.split(Ctes.EXP_TERRITORIO_SPLITTER); // EXP_TERRITORIO_SPLITTER = "\s*-\s*";
                 Territorio territorio = new Territorio(a[0]);
                 for (int i = 1; i < a.length; i++) {
                     territorio.agregarVecino(a[i]);
                 }
                 mapaTerritorios.put(a[0], territorio);
+
+
+
                 //System.out.println(Arrays.toString(a));
             }
         } catch (FileNotFoundException e) {
@@ -39,7 +64,9 @@ public class Mundo {
         }
     }
 
+    // region Territorios
     public static Territorio getTerritorio(String nombreTerritorio) {
+        if (nombreTerritorio == null) { return null; }
         return mapaTerritorios.get(nombreTerritorio);
     }
 
@@ -115,13 +142,21 @@ public class Mundo {
         return new ArrayList<>(mapaTerritorios.keySet());
     }
 
-    public static int ejercitosDe(String idJugador) {
+    public static int ejercitosDeJugador(String idJugador) {
         int n = 0;
         for (Territorio territorio : mapaTerritorios.values()) {
             if (territorio.getJugador().getId().equals(idJugador)) {
                 n += territorio.getEjercitos();
             }
         }
+        return n;
+    }
+
+    public static int ejercitosDeTerritorio(String nombreTerritorio) {
+        int n = 0;
+        if (nombreTerritorio == null) { return n; }
+        Territorio territorio = mapaTerritorios.get(nombreTerritorio);
+        if (territorio != null) { n = territorio.getEjercitos(); }
         return n;
     }
 
@@ -132,6 +167,54 @@ public class Mundo {
     public static boolean esTerritorioDelJugador(String nombreTerritorio, String idJugador) {
         return mapaTerritorios.containsKey(nombreTerritorio) && mapaTerritorios.get(nombreTerritorio).getJugador().getId().equals(idJugador);
     }
+
+    public static boolean sonVecinos(String nombreTerritorio1, String nombreTerritorio2, boolean delMismoJugador) {
+        Territorio territorio1 = mapaTerritorios.get(nombreTerritorio1);
+        Territorio territorio2 = mapaTerritorios.get(nombreTerritorio2);
+        List<String> vecinos1 = territorio1.getVecinos();
+        if (nombreTerritorio1 == null || territorio1 == null ||
+                nombreTerritorio2 == null || territorio2 == null ||
+                !vecinos1.contains(nombreTerritorio2)) { return false; }
+        return delMismoJugador == territorio1.getJugador().getId().equals(territorio2.getJugador().getId());// not xor = xnor
+    }
+
+    // endregion
+
+    // region Misiones
+
+    public static boolean esContinenteDe(String nombreContinente, String idJugador) {
+        // TODO: 22 Comprobar si el jugador es dueño de todos los territorios de un continente.
+
+
+
+
+
+
+        return true;
+    }
+
+    public static boolean tiene24Territorios(String idJugador) {
+        // TODO: 23 Comprobar si el jugador es dueño de al menos 24 territorios.
+
+
+
+
+
+
+        return false;
+    }
+
+    public static boolean tiene18TerritoriosCon2Ejercitos(String idJugador) {
+        // TODO: 24 Comprobar si el jugador es dueño de 18 territorios que tienen al menos 2 ejercitos.
+
+
+
+
+
+
+        return false;
+    }
+    // endregion
 
 //    public static void main(String[] args) {
 //        MapaTerritorios.loadWorld();

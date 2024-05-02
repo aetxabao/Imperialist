@@ -1,0 +1,65 @@
+@startuml
+
+class DemoJugar {
+# inicializar(Juego)
++ main(String[])
+}
+
+class SimuDefensa {
++ main(String[])
+}
+
+class DemoJugarDefensa {
++ main(String[])
+}
+
+class SimuAtaque {
++ main(String[])
+}
+
+class Main {
++ main(String[])
+}
+
+class Juego {
+- MazoTarjetas mazoTarjetas
+# List<Jugador> jugadores
+# int turno
++ Juego()
++ void jugar()
++ boolean jugarAtaque(Jugador)
++ boolean jugarDefensa(Jugador)
++ boolean cambiar(Jugador)
+  otros()
+}
+
+class JuegoSimuAtaque {
++ void jugar()
++ boolean jugarAtaque(Jugador)
+}
+
+class JuegoDemoDefensa {
++ void jugar()
++ boolean jugarDefensa(Jugador)
+}
+
+class JuegoSimuDefensa {
++ boolean jugarDefensa(Jugador)
++ boolean cambiar(Jugador)
+}
+
+JuegoSimuDefensa -left-|> JuegoDemoDefensa
+JuegoDemoDefensa -left-|> JuegoSimuAtaque
+JuegoSimuAtaque -left-|> Juego
+
+DemoJugarDefensa -up-|> DemoJugar
+SimuAtaque -up-|> DemoJugar
+SimuDefensa -up-|> DemoJugar
+
+DemoJugar ..> Juego
+Main ..> Juego
+SimuAtaque ..> JuegoSimuAtaque
+DemoJugarDefensa ..> JuegoDemoDefensa
+SimuDefensa ..> JuegoSimuDefensa
+
+@enduml

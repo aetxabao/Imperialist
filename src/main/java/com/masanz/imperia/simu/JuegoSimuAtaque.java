@@ -11,21 +11,23 @@ import java.util.List;
 
 /**
  * Clase que hereda de Juego para poder ejecutar el main de Simulacion
- * Para separar la simulación de la clase Juego
+ * Por no meter estos métodos en la clase Juego y ensuciarla
  */
-public class SimulaJuego extends Juego {
+public class JuegoSimuAtaque extends Juego {
 
-    public void jugarJuegoSimu() {
+    @Override
+    public void jugar() {
         while (true) {
             Jugador jugador = jugadores.get(turno);
-            if (!jugarSimu(jugador)) { break; }
+            if (!jugarAtaque(jugador)) { break; }
             if (!comprobarJugadores()) { break; }
             turno = (turno + 1) % jugadores.size();
         }
         Gui.mostrarGanadorJuego(jugadores.get(0).getNombre());
     }
 
-    public boolean jugarSimu(Jugador jugador) {
+    @Override
+    public boolean jugarAtaque(Jugador jugador) {
         Territorio territorioAtacante = obtenerTerritorioAtacanteSimu(jugador);
 
         Territorio territorioAtacado = obtenerTerritorioAtacadoSimu(territorioAtacante);
@@ -34,7 +36,7 @@ public class SimulaJuego extends Juego {
         int perdidasAtacanteTotal = dosValores.uno();
         int perdidasAtacadoTotal = dosValores.dos();
 
-        resultado(territorioAtacante, territorioAtacado, perdidasAtacanteTotal, perdidasAtacadoTotal);
+        resultadoAtaque(territorioAtacante, territorioAtacado, perdidasAtacanteTotal, perdidasAtacadoTotal);
 
         return true;
     }
