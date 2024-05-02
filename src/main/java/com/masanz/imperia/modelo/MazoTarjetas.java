@@ -23,23 +23,23 @@ public class MazoTarjetas {
 
     public void agregar44Tarjetas() {
         // TODO: 11 Agregar 44 tarjetas al mazo de tarjetas: 14 de infantería, 14 de caballería, 14 de artillería y 2 comodines.
-
-
-
-
-
-
-
+        for (int i = 0; i < 14; i++) {
+            mazo.add(new Tarjeta(T_INFANTERIA));
+            mazo.add(new Tarjeta(T_CABALLERIA));
+            mazo.add(new Tarjeta(T_ARTILLERIA));
+        }
+        mazo.add(new Tarjeta(T_COMODIN));
+        mazo.add(new Tarjeta(T_COMODIN));
     }
 
     public void barajar() {
         // TODO: 12 Barajar las tarjetas del mazo: Intercambiar cada tarjeta con otra tarjeta aleatoria (tantas veces como tarjetas haya).
-
-
-
-
-
-
+        for (int i = 0; i < mazo.size(); i++) {
+            int j = (int) (Math.random() * mazo.size());
+            Tarjeta aux = mazo.get(i);
+            mazo.set(i, mazo.get(j));
+            mazo.set(j, aux);
+        }
     }
 
     public int tamano() {
@@ -78,14 +78,14 @@ public class MazoTarjetas {
         // si el mazo tiene 2 tarjetas: T_INFANTERIA, T_INFANTERIA
         // si tipo = T_INFANTERIA e igual = true, saca la tarjeta T_INFANTERIA y queda 1: T_INFANTERIA
         // si tipo = T_INFANTERIA e igual = false, devuelve null y quedan las mismas tarjetas
-
-
-
-
-
-
-
-
+        for (int i = 0; i < mazo.size(); i++) {
+            if (mazo.get(i).getTipo().equals(tipo) && igual) {
+                return mazo.remove(i);
+            }
+            if (!mazo.get(i).getTipo().equals(tipo) && !igual) {
+                return mazo.remove(i);
+            }
+        }
         return null;
     }
 
@@ -99,16 +99,16 @@ public class MazoTarjetas {
 
     private Map<String, Integer> getMapaTiposCantidad() {
         // TODO: 14 Devolver un mapa ordenado con el tipo de tarjeta y la cantidad de cada tipo que hay en el mazo.
-
-
-
-
-
-
-
-
-
-        return null;
+        Map<String, Integer> mapa = new TreeMap<>();
+        for (Tarjeta tarjeta : mazo) {
+            String tipo = tarjeta.getTipo();
+            if (mapa.containsKey(tipo)) {
+                mapa.put(tipo, mapa.get(tipo) + 1);
+            } else {
+                mapa.put(tipo, 1);
+            }
+        }
+        return mapa;
     }
 
     private boolean tresDistintas() {
@@ -165,14 +165,14 @@ public class MazoTarjetas {
         // Poner en un map el tipo de tarjeta y la cantidad de cada tipo
         Map<String, Integer> mapa = getMapaTiposCantidad();
         // TODO: 15 Devolver una cadena con el número de tarjetas de cada tipo que hay en el mazo obviando los tipos que no hay iterando el mapa.
-
-
-
-
-
-
-
-        return "";
+        StringBuilder sb = new StringBuilder();
+        for (Map.Entry<String, Integer> entry : mapa.entrySet()) {
+            sb.append(entry.getKey()).append("(").append(entry.getValue()).append(") ");
+        }
+        if (mapa.size() > 0) {
+            sb.deleteCharAt(sb.length()-1);
+        }
+        return sb.toString();
     }
 
     @Override

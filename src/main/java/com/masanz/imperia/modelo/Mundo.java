@@ -39,12 +39,12 @@ public class Mundo {
             while ( (line = reader.readLine()) != null ) {
                 if (line.isEmpty()) { continue; }
 
-
-
-
-
-
-
+                if (line.startsWith("#")) {
+                    continente = line.replace("#", "").trim();
+                    territoriosContinente = new ArrayList<>();
+                    mapaContinentes.put(continente, territoriosContinente);
+                    continue;
+                }
 
                 String[] a = line.split(Ctes.EXP_TERRITORIO_SPLITTER); // EXP_TERRITORIO_SPLITTER = "\s*-\s*";
                 Territorio territorio = new Territorio(a[0]);
@@ -53,7 +53,7 @@ public class Mundo {
                 }
                 mapaTerritorios.put(a[0], territorio);
 
-
+                territoriosContinente.add(territorio);
 
                 //System.out.println(Arrays.toString(a));
             }
@@ -184,35 +184,35 @@ public class Mundo {
 
     public static boolean esContinenteDe(String nombreContinente, String idJugador) {
         // TODO: 22 Comprobar si el jugador es dueño de todos los territorios de un continente.
-
-
-
-
-
-
+        List<Territorio> territorios = mapaContinentes.get(nombreContinente);
+        for (Territorio territorio : territorios) {
+            if (!territorio.getJugador().getId().equals(idJugador)) {
+                return false;
+            }
+        }
         return true;
     }
 
     public static boolean tiene24Territorios(String idJugador) {
         // TODO: 23 Comprobar si el jugador es dueño de al menos 24 territorios.
-
-
-
-
-
-
-        return false;
+        int n = 0;
+        for (Territorio territorio : mapaTerritorios.values()) {
+            if (territorio.getJugador().getId().equals(idJugador)) {
+                n++;
+            }
+        }
+        return n >= 24;
     }
 
     public static boolean tiene18TerritoriosCon2Ejercitos(String idJugador) {
         // TODO: 24 Comprobar si el jugador es dueño de 18 territorios que tienen al menos 2 ejercitos.
-
-
-
-
-
-
-        return false;
+        int n = 0;
+        for (Territorio territorio : mapaTerritorios.values()) {
+            if (territorio.getJugador().getId().equals(idJugador) && territorio.getEjercitos() >= 2) {
+                n++;
+            }
+        }
+        return n >= 18;
     }
     // endregion
 

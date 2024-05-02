@@ -130,17 +130,17 @@ public class Juego {
         // Por ejemplo, si se dispone de los territorios: Alaska, Alberta y Ontario y hay que colocar tres ejercitos
         // se podría obtener una asignación a Alberta, Alberta y Alaska y entonces se devolvería una lista con
         // los nombres de los territorios ordenados Alaska y Alberta
-
-
-
-
-
-
-
+        Set<String> cjtoNombresTerritorios = new TreeSet<>();
+        for (int i = 0; i < numeroEjercitos; i++) {
+            int idx = (int) (Math.random()*listaTerritorios.size());
+            Territorio territorio = listaTerritorios.get(idx);
+            territorio.sumarEjercitos(1);
+            cjtoNombresTerritorios.add(territorio.getNombre());
+        }
         // TODO: 32 Devolver una lista de nombres de territorios creada a partir del conjunto de nombres de territorios
         // utiliza la colección anterior para crear una lista de nombres de territorios y devuélvela
         // se puede hacer en una sóla línea pasando como parámetro la colección al método constructor de la lista
-        return null;
+        return new ArrayList<>(cjtoNombresTerritorios);
     }
 
     // endregion
