@@ -51,7 +51,7 @@ public class Jugador {
     }
 
     public void meterTarjeta(Tarjeta tarjeta) {
-        mazoTarjetas.meterTarjeta(tarjeta);
+        mazoTarjetas.meter(tarjeta);
     }
 
     public int cantidadTarjetas() {

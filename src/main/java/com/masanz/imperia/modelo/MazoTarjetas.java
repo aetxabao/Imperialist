@@ -1,7 +1,5 @@
 package com.masanz.imperia.modelo;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -11,48 +9,17 @@ import static com.masanz.imperia.consts.Ctes.*;
  * Clase MazoTarjetas que representa un mazo de tarjetas
  * que inicialmente está vacío y se puede cargar con 44 tarjetas (mazo del juego)
  * o metiendo tarjetas (mazos de cada jugador). Se puede sacar y cambiar tarjetas.
- * @author TODO: 10 AQUÍ_TU_NOMBRE
  */
-public class MazoTarjetas {
-
-    private List<Tarjeta> mazo;
-
-    public MazoTarjetas() {
-        mazo = new ArrayList<>();
-    }
+public class MazoTarjetas extends Mazo<Tarjeta> {
 
     public void agregar44Tarjetas() {
-        // TODO: 11 Agregar 44 tarjetas al mazo de tarjetas: 14 de infantería, 14 de caballería, 14 de artillería y 2 comodines.
         for (int i = 0; i < 14; i++) {
-            mazo.add(new Tarjeta(T_INFANTERIA));
-            mazo.add(new Tarjeta(T_CABALLERIA));
-            mazo.add(new Tarjeta(T_ARTILLERIA));
+            meter(new Tarjeta(T_INFANTERIA));
+            meter(new Tarjeta(T_CABALLERIA));
+            meter(new Tarjeta(T_ARTILLERIA));
         }
-        mazo.add(new Tarjeta(T_COMODIN));
-        mazo.add(new Tarjeta(T_COMODIN));
-    }
-
-    public void barajar() {
-        // TODO: 12 Barajar las tarjetas del mazo: Intercambiar cada tarjeta con otra tarjeta aleatoria (tantas veces como tarjetas haya).
-        for (int i = 0; i < mazo.size(); i++) {
-            int j = (int) (Math.random() * mazo.size());
-            Tarjeta aux = mazo.get(i);
-            mazo.set(i, mazo.get(j));
-            mazo.set(j, aux);
-        }
-    }
-
-    public int tamano() {
-        return mazo.size();
-    }
-
-    public void meterTarjeta(Tarjeta tarjeta) {
-        mazo.add(tarjeta);
-    }
-
-    public Tarjeta sacarTarjeta() {
-        if (mazo.isEmpty()) { return null; }
-        return mazo.remove(0);
+        meter(new Tarjeta(T_COMODIN));
+        meter(new Tarjeta(T_COMODIN));
     }
 
     public Tarjeta sacarTarjeta(String tipo) {
@@ -64,21 +31,7 @@ public class MazoTarjetas {
     }
 
     private Tarjeta sacarTarjeta(String tipo, boolean igual) {
-        // TODO: 13 Sacar la primera tarjeta del mazo que sea del tipo indicado y devolverla si igual es true.
-        // TODO: 13 Si igual es false, sacar la primera tarjeta del mazo que no sea del tipo indicado y devolverla.
-        // si el mazo tiene 4 tarjetas: T_ARTILLERIA, T_INFANTERIA, T_CABALLERIA, T_ARTILLERIA
-        // si tipo = T_INFANTERIA e igual = true, saca la tarjeta T_INFANTERIA y quedan 3: T_ARTILLERIA, T_CABALLERIA, T_ARTILLERIA
-        // si tipo = T_INFANTERIA e igual = false, saca la tarjeta T_ARTILLERIA y quedan 3: T_INFANTERIA, T_CABALLERIA, T_ARTILLERIA
-        // si el mazo tiene 4 tarjetas: T_ARTILLERIA, T_INFANTERIA, T_CABALLERIA, T_ARTILLERIA
-        // si tipo = T_ARTILLERIA e igual = true, saca la tarjeta T_ARTILLERIA y quedan 3: T_INFANTERIA, T_CABALLERIA, T_ARTILLERIA
-        // si tipo = T_ARTILLERIA e igual = false, saca la tarjeta T_INFANTERIA y quedan 3: T_ARTILLERIA, T_CABALLERIA, T_ARTILLERIA
-        // si el mazo tiene 4 tarjetas: T_ARTILLERIA, T_INFANTERIA, T_INFANTERIA, T_ARTILLERIA
-        // si tipo = T_CABALLERIA e igual = true, devuelve null y quedan las mismas tarjetas
-        // si tipo = T_CABALLERIA e igual = false, saca la tarjeta T_ARTILLERIA y quedan 3: T_INFANTERIA, T_INFANTERIA, T_ARTILLERIA
-        // si el mazo tiene 2 tarjetas: T_INFANTERIA, T_INFANTERIA
-        // si tipo = T_INFANTERIA e igual = true, saca la tarjeta T_INFANTERIA y queda 1: T_INFANTERIA
-        // si tipo = T_INFANTERIA e igual = false, devuelve null y quedan las mismas tarjetas
-        for (int i = 0; i < mazo.size(); i++) {
+        for (int i = 0; i < tamano(); i++) {
             if (mazo.get(i).getTipo().equals(tipo) && igual) {
                 return mazo.remove(i);
             }
@@ -98,7 +51,6 @@ public class MazoTarjetas {
     }
 
     private Map<String, Integer> getMapaTiposCantidad() {
-        // TODO: 14 Devolver un mapa ordenado con el tipo de tarjeta y la cantidad de cada tipo que hay en el mazo.
         Map<String, Integer> mapa = new TreeMap<>();
         for (Tarjeta tarjeta : mazo) {
             String tipo = tarjeta.getTipo();
@@ -164,22 +116,12 @@ public class MazoTarjetas {
     public String getTiposCantidad() {
         // Poner en un map el tipo de tarjeta y la cantidad de cada tipo
         Map<String, Integer> mapa = getMapaTiposCantidad();
-        // TODO: 15 Devolver una cadena con el número de tarjetas de cada tipo que hay en el mazo obviando los tipos que no hay iterando el mapa.
         StringBuilder sb = new StringBuilder();
         for (Map.Entry<String, Integer> entry : mapa.entrySet()) {
             sb.append(entry.getKey()).append("(").append(entry.getValue()).append(") ");
         }
         if (mapa.size() > 0) {
             sb.deleteCharAt(sb.length()-1);
-        }
-        return sb.toString();
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        for (Tarjeta tarjeta : mazo) {
-            sb.append(tarjeta.getTipo()).append('\n');
         }
         return sb.toString();
     }

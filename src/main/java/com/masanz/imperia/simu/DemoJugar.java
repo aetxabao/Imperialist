@@ -20,6 +20,7 @@ public class DemoJugar {
         jugadores.add( new Jugador("D", "Edu"));
         juego.setJugadores(jugadores);
         juego.repartirTerritorios();
+        juego.asignarMisiones();
         juego.colocarUnEjercitoEnCadaTerritorio();
         for (Jugador jugador : jugadores) {
             juego.repartoEjercitos(jugador.getId());

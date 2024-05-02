@@ -7,9 +7,9 @@ import java.util.*;
 
 /**
  * Clase que representa un juego de risk en modo consola.
- * @author TODO: 30 AQUÍ_TU_NOMBRE
  */
 public class Juego {
+
     private MazoTarjetas mazoTarjetas;
 
     protected List<Jugador> jugadores;
@@ -65,6 +65,11 @@ public class Juego {
 
     }
 
+    public void asignarMisiones() {
+        GestorMisiones.cargarMisiones(jugadores);
+        GestorMisiones.repartirMisiones();
+    }
+
     public void colocarEjercitos() {
         colocarUnEjercitoEnCadaTerritorio();
         for (int i = 0; i < jugadores.size(); i++) {
@@ -89,6 +94,7 @@ public class Juego {
                 case 2: Gui.mostrarTerritoriosMundo(); break;
                 case 3: Gui.modificarEnTerritorioEjercitosJugador(jugador.getId(), ejercitosInicialesPorJugador()); break;
                 case 4: repartoEjercitos(jugador.getId()); break;
+                case 5: Gui.mostrarMisionSecreta(jugador.getNombre(), GestorMisiones.getDescripcionMision(jugador)); break;
                 case 0: if (Gui.comprobarEjercitosJugador(jugador.getId(), ejercitosInicialesPorJugador())) {return;}
             }
         }
@@ -122,14 +128,6 @@ public class Juego {
      */
     public List<String> repartoEjercitos(String idJugador, int numeroEjercitos){
         List<Territorio> listaTerritorios = Mundo.getListaTerritoriosDelJugador(idJugador);
-        // TODO: 31 Crear una colección de nombres de territorios para evitar repeticiones ordenadas alfabéticamente
-        // elige el tipo de colección que consideres más adecuado para que sea ordenada sin repeticiones e instánciala
-        // itera un número de veces igual al número de ejércitos a repartir para que en cada iteración
-        // se obtenga un territorio de lista de territorios del jugador al hazar y se le sume un ejercito
-        // el nombre del territorio se añade a la colección de nombres de territorios
-        // Por ejemplo, si se dispone de los territorios: Alaska, Alberta y Ontario y hay que colocar tres ejercitos
-        // se podría obtener una asignación a Alberta, Alberta y Alaska y entonces se devolvería una lista con
-        // los nombres de los territorios ordenados Alaska y Alberta
         Set<String> cjtoNombresTerritorios = new TreeSet<>();
         for (int i = 0; i < numeroEjercitos; i++) {
             int idx = (int) (Math.random()*listaTerritorios.size());
@@ -137,26 +135,34 @@ public class Juego {
             territorio.sumarEjercitos(1);
             cjtoNombresTerritorios.add(territorio.getNombre());
         }
-        // TODO: 32 Devolver una lista de nombres de territorios creada a partir del conjunto de nombres de territorios
-        // utiliza la colección anterior para crear una lista de nombres de territorios y devuélvela
-        // se puede hacer en una sóla línea pasando como parámetro la colección al método constructor de la lista
         return new ArrayList<>(cjtoNombresTerritorios);
     }
 
     // endregion
 
     public void jugar() {
+        boolean hayGanador = false;
+        Jugador jugador;
         while (true) {
-            Jugador jugador = jugadores.get(turno);
+            jugador = jugadores.get(turno);
+            if (jugadores.size()==1) {
+                // Puede ser que solo quede un jugador y no haya conseguido su misión
+                // si tenía que tener 18 territorios con dos ejércitos en cada uno
+                hayGanador = true;
+                break;
+            }
+            if (GestorMisiones.cumpleMision(jugador)) { hayGanador = true; break; }
             if (!jugarAtaque(jugador)) { break; }
             if (Mundo.ejercitosDeJugador(jugador.getId())>0) {
                 if (!jugarDefensa(jugador)) { break; }
             }
-            if (!comprobarJugadores()) { break; }
+            //if (!comprobarJugadores()) { break; }
+            comprobarJugadores();
             turno = (turno + 1) % jugadores.size();
         }
-        if (jugadores.size() == 1) {
-            Gui.mostrarGanadorJuego(jugadores.get(0).getNombre());
+        if (hayGanador) {
+            Gui.mostrarGanadorJuego(jugador.getNombre());
+            Gui.mostrarMisionSecreta(jugador.getNombre(), GestorMisiones.getDescripcionMision(jugador));
         }else {
             Gui.mostrarFinJuego();
         }
@@ -192,6 +198,8 @@ public class Juego {
                 case 1: Gui.mostrarTerritorios(jugador.getId()); break;
                 case 2: Gui.mostrarTerritoriosMundo(); break;
                 case 3: if (atacar(jugador)) { return true; } break;
+                case 4: return true; // no atacar
+                case 5: Gui.mostrarMisionSecreta(jugador.getNombre(), GestorMisiones.getDescripcionMision(jugador)); break;
                 case 0: if (Gui.confirmarFin()) { return false;}
             }
         }
@@ -281,7 +289,7 @@ public class Juego {
                 if (unoMas) { territorioAtacante.sumarEjercitos(1); }
             }
             // Solo si gana obtiene una tarjeta, el atacado aunque gane no obtiene tarjeta
-            jugador.meterTarjeta(mazoTarjetas.sacarTarjeta());
+            jugador.meterTarjeta(mazoTarjetas.sacar());
             if (mazoTarjetas.tamano()==0) {
                 mazoTarjetas.agregar44Tarjetas();
                 mazoTarjetas.barajar();
@@ -301,6 +309,7 @@ public class Juego {
                 case 3: mover(jugador); break;
                 case 4: cambiar(jugador);  break;
                 case 5: if (!haceFaltaCambiar(jugador)) { return true; } break;
+                case 6: Gui.mostrarMisionSecreta(jugador.getNombre(), GestorMisiones.getDescripcionMision(jugador)); break;
                 case 0: if (Gui.confirmarFin()) { return false;}
             }
         }

@@ -1,0 +1,108 @@
+********************************************************************************************************
+*                                         I M P E R I A L I S T                                        *
+********************************************************************************************************
+
+Empieza el jugador 1 Aitor
+
+****************************************************
+Aitor decide si quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+4. No atacar
+5. Mostrar mi misión secreta
+0. Finalizar
+****************************************************
+Opción: 5
+
+MISIÓN SECRETA DE AITOR: Conquistar América del Norte y Oceanía
+****************************************************
+Aitor decide si quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+4. No atacar
+5. Mostrar mi misión secreta
+0. Finalizar
+****************************************************
+Opción: 4
+
+****************************************************
+Aitor decide que acción quieres realizar.
+Tienes estas tarjetas:
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Mover ejércitos de un territorio a otro vecino propio
+4. Cambiar tarjetas por ejércitos
+5. Pasar turno al siguiente jugador
+6. Mostrar mi misión secreta
+0. Finalizar
+****************************************************
+Opción: 5
+
+****************************************************
+Alba decide si quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+4. No atacar
+5. Mostrar mi misión secreta
+0. Finalizar
+****************************************************
+Opción: 4
+
+****************************************************
+Alba decide que acción quieres realizar.
+Tienes estas tarjetas:
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Mover ejércitos de un territorio a otro vecino propio
+4. Cambiar tarjetas por ejércitos
+5. Pasar turno al siguiente jugador
+6. Mostrar mi misión secreta
+0. Finalizar
+****************************************************
+Opción: 6
+
+MISIÓN SECRETA DE ALBA: Destruir a Edu (D)
+****************************************************
+Alba decide que acción quieres realizar.
+Tienes estas tarjetas:
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Mover ejércitos de un territorio a otro vecino propio
+4. Cambiar tarjetas por ejércitos
+5. Pasar turno al siguiente jugador
+6. Mostrar mi misión secreta
+0. Finalizar
+****************************************************
+Opción: 5
+
+****************************************************
+Edu decide si quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+4. No atacar
+5. Mostrar mi misión secreta
+0. Finalizar
+****************************************************
+Opción: 5
+
+MISIÓN SECRETA DE EDU: Conquistar Asia y América del Sur
+****************************************************
+Edu decide si quieres atacar.
+1. Mostrar mis territorios
+2. Mostrar los territorios del mundo entero
+3. Atacar
+4. No atacar
+5. Mostrar mi misión secreta
+0. Finalizar
+****************************************************
+Opción: 0
+
+Desea terminar la partida en curso [N]o/[s]í: s
+********************************************************************************************************
+*                                     MAKE LOVE, NOT WAR. BYE, BYE!                                    *
+********************************************************************************************************
+

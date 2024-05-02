@@ -2,6 +2,7 @@ package com.masanz.imperia.terminal;
 
 import static com.masanz.imperia.consts.Ctes.*;
 import com.masanz.imperia.modelo.Mundo;
+import com.masanz.imperia.modelo.GestorMisiones;
 
 import java.util.List;
 import java.util.Scanner;
@@ -28,7 +29,7 @@ public class Gui {
     }
 
     public static void mostrarGanadorJuego(String nombre) {
-        String s = "THE LORD OF THE WORLD IS ";
+        String s = "AND THE WINNER IS ";
         s += nombre.toUpperCase();
         mostrarTitulo(s);
     }
@@ -84,11 +85,12 @@ public class Gui {
         System.out.println("2. Mostrar los territorios del mundo entero");
         System.out.println("3. Modificar el número de ejércitos en uno de mis territorios");
         System.out.println("4. Repartir ejércitos pendientes entre mis territorios aleatoriamente");
+        System.out.println("5. Mostrar mi misión secreta");
         System.out.println("0. Finalizar ");
         System.out.println("*".repeat(LONG_TITULO/2));
         System.out.print("Opción: ");
         Scanner scanner = new Scanner(System.in);
-        while(opc<0 || opc>4) {
+        while(opc<0 || opc>5) {
             try {
                 opc = Integer.parseInt(scanner.nextLine().trim());
             }catch (Exception e) { }
@@ -100,14 +102,16 @@ public class Gui {
     public static int menuAtaque(String nombreJugador) {
         int opc = -1;
         System.out.println("*".repeat(LONG_TITULO/2));
-        System.out.printf("%s decide que territorio quieres atacar.\n", nombreJugador);
+        System.out.printf("%s decide si quieres atacar.\n", nombreJugador);
         System.out.println("1. Mostrar mis territorios");
         System.out.println("2. Mostrar los territorios del mundo entero");
         System.out.println("3. Atacar");
+        System.out.println("4. No atacar");
+        System.out.println("5. Mostrar mi misión secreta");
         System.out.println("0. Finalizar ");
         System.out.println("*".repeat(LONG_TITULO/2));
         System.out.print("Opción: ");
-        while(opc<0 || opc>3) {
+        while(opc<0 || opc>5) {
             try {
                 opc = Integer.parseInt(teclado.nextLine().trim());
             }catch (Exception e) { }
@@ -126,10 +130,11 @@ public class Gui {
         System.out.println("3. Mover ejércitos de un territorio a otro vecino propio");
         System.out.println("4. Cambiar tarjetas por ejércitos");
         System.out.println("5. Pasar turno al siguiente jugador");
+        System.out.println("6. Mostrar mi misión secreta");
         System.out.println("0. Finalizar ");
         System.out.println("*".repeat(LONG_TITULO/2));
         System.out.print("Opción: ");
-        while(opc<0 || opc>5) {
+        while(opc<0 || opc>6) {
             try {
                 opc = Integer.parseInt(teclado.nextLine().trim());
             }catch (Exception e) { }
@@ -140,6 +145,11 @@ public class Gui {
 
     public static void mostrarTerritorios(String idJugador) {
         System.out.println(Mundo.listadoConFronteras(idJugador));
+    }
+
+
+    public static void mostrarMisionSecreta(String nombreJugador, String descripcion) {
+        System.out.printf("MISIÓN SECRETA DE %s: %s\n", nombreJugador.toUpperCase(), descripcion);
     }
 
     public static void mostrarTerritoriosMundo() {

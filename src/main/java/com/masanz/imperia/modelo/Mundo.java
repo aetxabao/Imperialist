@@ -9,7 +9,6 @@ import java.util.TreeMap;
 
 /**
  * Clase que representa el mapa de juego que consta de territorios de diferentes continentes.
- * @author TODO: 20 AQUÍ_TU_NOMBRE
  */
 public class Mundo {
 
@@ -27,7 +26,6 @@ public class Mundo {
      * Los territorios corresponden al continente que se haya indicado en la última línea que comienza con "#".
      */
     public static void loadWorld() {
-        // TODO: 21 Cargar los mapas de territorios (hecho) y de continentes (por hacer).
         String continente = null;
         List<Territorio> territoriosContinente = null;
 
@@ -183,7 +181,6 @@ public class Mundo {
     // region Misiones
 
     public static boolean esContinenteDe(String nombreContinente, String idJugador) {
-        // TODO: 22 Comprobar si el jugador es dueño de todos los territorios de un continente.
         List<Territorio> territorios = mapaContinentes.get(nombreContinente);
         for (Territorio territorio : territorios) {
             if (!territorio.getJugador().getId().equals(idJugador)) {
@@ -194,7 +191,6 @@ public class Mundo {
     }
 
     public static boolean tiene24Territorios(String idJugador) {
-        // TODO: 23 Comprobar si el jugador es dueño de al menos 24 territorios.
         int n = 0;
         for (Territorio territorio : mapaTerritorios.values()) {
             if (territorio.getJugador().getId().equals(idJugador)) {
@@ -205,7 +201,6 @@ public class Mundo {
     }
 
     public static boolean tiene18TerritoriosCon2Ejercitos(String idJugador) {
-        // TODO: 24 Comprobar si el jugador es dueño de 18 territorios que tienen al menos 2 ejercitos.
         int n = 0;
         for (Territorio territorio : mapaTerritorios.values()) {
             if (territorio.getJugador().getId().equals(idJugador) && territorio.getEjercitos() >= 2) {

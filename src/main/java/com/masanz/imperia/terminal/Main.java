@@ -7,6 +7,7 @@ public class Main {
 
         juego.crearJugadores();
         juego.repartirTerritorios();
+        juego.asignarMisiones();
         juego.colocarEjercitos();
 
         juego.jugar();

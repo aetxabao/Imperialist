@@ -1,9 +1,6 @@
 package com.masanz.imperia.simu;
 
-import com.masanz.imperia.modelo.DosValores;
-import com.masanz.imperia.modelo.Jugador;
-import com.masanz.imperia.modelo.Mundo;
-import com.masanz.imperia.modelo.Territorio;
+import com.masanz.imperia.modelo.*;
 import com.masanz.imperia.terminal.Gui;
 import com.masanz.imperia.terminal.Juego;
 
@@ -17,13 +14,24 @@ public class JuegoSimuAtaque extends Juego {
 
     @Override
     public void jugar() {
+        boolean hayGanador = false;
+        Jugador jugador;
         while (true) {
-            Jugador jugador = jugadores.get(turno);
+            jugador = jugadores.get(turno);
+            if (jugadores.size()==1) {
+                // Puede ser que solo quede un jugador y no haya conseguido su misión
+                // si tenía que tener 18 territorios con dos ejércitos en cada uno
+                hayGanador = true;
+                break;
+            }
+            if (GestorMisiones.cumpleMision(jugador)) { hayGanador = true; break; }
             if (!jugarAtaque(jugador)) { break; }
-            if (!comprobarJugadores()) { break; }
+            //if (!comprobarJugadores()) { break; }
+            comprobarJugadores();
             turno = (turno + 1) % jugadores.size();
         }
-        Gui.mostrarGanadorJuego(jugadores.get(0).getNombre());
+        Gui.mostrarGanadorJuego(jugador.getNombre());
+        Gui.mostrarMisionSecreta(jugador.getNombre(), GestorMisiones.getDescripcionMision(jugador));
     }
 
     @Override
@@ -42,16 +50,23 @@ public class JuegoSimuAtaque extends Juego {
     }
 
     private Territorio obtenerTerritorioAtacanteSimu(Jugador jugador) {
+        int i;
+        Territorio territorio;
         List<Territorio> territorioList = Mundo.getListaTerritoriosDelJugador(jugador.getId());
         while (true) {
-            int i = (int) (Math.random()*territorioList.size());
-            Territorio territorio = territorioList.get(i);
-            List<String> vecinos = territorio.getVecinos();
-            for (String vecino : vecinos) {
-                Territorio territorioVecino = Mundo.getTerritorio(vecino);
-                if (!territorioVecino.getJugador().equals(jugador)) {
-                    return territorio;
+            try {
+                i = (int) (Math.random()*territorioList.size());
+                territorio = territorioList.get(i);
+                List<String> vecinos = territorio.getVecinos();
+                for (String vecino : vecinos) {
+                    Territorio territorioVecino = Mundo.getTerritorio(vecino);
+                    if (!territorioVecino.getJugador().equals(jugador)) {
+                        return territorio;
+                    }
                 }
+            } catch (Exception e) {
+                System.out.println("Error en obtenerTerritorioAtacanteSimu");
+                throw e;
             }
         }
     }
