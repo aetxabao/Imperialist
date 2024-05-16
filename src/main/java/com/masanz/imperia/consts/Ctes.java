@@ -25,4 +25,17 @@ public class Ctes {
     public static final int CAMBIO_TRESTIPOS = 2;//4;
     public static final int MAX_TARJETAS = 5;
 
+
+    public static final int EJERCITOS_INICIALES_POR_JUGADOR_2 = 5;
+    public static final int EJERCITOS_INICIALES_POR_JUGADOR_3 = 18;//3;
+    public static final int EJERCITOS_INICIALES_POR_JUGADOR_4 = 3;
+    public static final int EJERCITOS_INICIALES_POR_JUGADOR_5 = 2;
+    public static final int EJERCITOS_INICIALES_POR_JUGADOR_X = 2;
+
+//    public static final int EJERCITOS_INICIALES_POR_JUGADOR_2 = 40;
+//    public static final int EJERCITOS_INICIALES_POR_JUGADOR_3 = 35;
+//    public static final int EJERCITOS_INICIALES_POR_JUGADOR_4 = 30;
+//    public static final int EJERCITOS_INICIALES_POR_JUGADOR_5 = 25;
+//    public static final int EJERCITOS_INICIALES_POR_JUGADOR_X = 20;
+
 }

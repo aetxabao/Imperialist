@@ -14,6 +14,8 @@ public class SimuDefensa extends DemoJugar {
         inicializar(juego);
 
         juego.jugar();
+
+        juego.fin();
     }
 
 }

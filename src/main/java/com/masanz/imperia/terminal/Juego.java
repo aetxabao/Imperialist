@@ -102,11 +102,11 @@ public class Juego {
 
     public int ejercitosInicialesPorJugador(){
         return switch (jugadores.size()) {
-            case 2 -> 40;
-            case 3 -> 35;
-            case 4 -> 30;
-            case 5 -> 25;
-            default -> 20;
+            case 2 -> EJERCITOS_INICIALES_POR_JUGADOR_2;
+            case 3 -> EJERCITOS_INICIALES_POR_JUGADOR_3;
+            case 4 -> EJERCITOS_INICIALES_POR_JUGADOR_4;
+            case 5 -> EJERCITOS_INICIALES_POR_JUGADOR_5;
+            default -> EJERCITOS_INICIALES_POR_JUGADOR_X;
         };
     }
 
@@ -153,6 +153,7 @@ public class Juego {
             }
             if (GestorMisiones.cumpleMision(jugador)) { hayGanador = true; break; }
             if (!jugarAtaque(jugador)) { break; }
+            if (GestorMisiones.cumpleMision(jugador)) { hayGanador = true; break; }//NUEVO
             if (Mundo.ejercitosDeJugador(jugador.getId())>0) {
                 if (!jugarDefensa(jugador)) { break; }
             }
@@ -377,4 +378,21 @@ public class Juego {
         return false;
     }
     // endregion
+
+
+    // region fin
+    public void fin() {
+        while (true) {
+            int opc = Gui.menuFin();
+            switch (opc) {
+                case 1: Gui.mostrar(GestorMisiones.getMisiones()); break;
+                case 2: Gui.mostrar(Mundo.getTerritoriosPorNumeroDeEjercitos()); break;
+                case 3: Gui.mostrar(Mundo.getTerritoriosPorNombrePropietario()); break;
+                case 4: Gui.mostrar(Mundo.getTerritoriosPorContinente()); break;
+                case 0: return;
+            }
+        }
+    }
+    // endregion
+
 }

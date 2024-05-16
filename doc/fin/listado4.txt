@@ -1,0 +1,12 @@
+Administración y gestión
+	ADFI (Aitor) 2
+	ASDI (Aitor) 2
+Comercio y marketing
+	COIN (Aitor) 1
+	GVEC (Aitor) 3
+	MAPU (Aitor) 2
+	TRLO (Alba) 8
+Informática y comunicaciones
+	ASIR (Alba) 6
+	DAM (Edu) 3
+	DAW (Aitor) 1

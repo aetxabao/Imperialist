@@ -1,0 +1,170 @@
+********************************************************************************************************
+*                                         I M P E R I A L I S T                                        *
+********************************************************************************************************
+
+Empieza el jugador 3 Edu
+
+--------------------------------------------------------------------------------------------------------
+Edu        [5, 4, 2]          --> pierde 2 ejercito(s) de TRLO, quedan 4
+Alba       [6, 6]             --> pierde 0 ejercito(s) de ASIR, quedan 8
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+Edu        [6, 2, 1]          --> pierde 0 ejercito(s) de TRLO, quedan 4
+Alba       [5, 1]             --> pierde 2 ejercito(s) de ASIR, quedan 6
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+Edu        [5, 5, 5]          --> pierde 2 ejercito(s) de TRLO, quedan 2
+Alba       [6, 6]             --> pierde 0 ejercito(s) de ASIR, quedan 6
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+Edu        [6, 3]             --> pierde 1 ejercito(s) de TRLO, quedan 1
+Alba       [5, 5]             --> pierde 1 ejercito(s) de ASIR, quedan 5
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+Edu        [4]                --> pierde 1 ejercito(s) de TRLO, quedan 0
+Alba       [6, 2]             --> pierde 0 ejercito(s) de ASIR, quedan 5
+--------------------------------------------------------------------------------------------------------
+########################################################################################################
+Alba ha conseguido ganar TRLO perdiendo 3 ejercito(s)
+Edu no ha conseguido ganar, ha perdido el territorio de TRLO y 6 ejercito(s)
+########################################################################################################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TRLO L(2) [ADFI D(6), ASIR L(3), DAM T(6)]
+ASIR L(3) [GVEC T(5), COIN L(5), MAPU D(6), TRLO L(2)]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------------------------------------------------
+Aitor      [4, 1, 1]          --> pierde 2 ejercito(s) de DAM, quedan 4
+Alba       [6, 2]             --> pierde 0 ejercito(s) de TRLO, quedan 2
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+Aitor      [5, 5, 3]          --> pierde 0 ejercito(s) de DAM, quedan 4
+Alba       [3, 1]             --> pierde 2 ejercito(s) de TRLO, quedan 0
+--------------------------------------------------------------------------------------------------------
+########################################################################################################
+Aitor ha conseguido ganar TRLO perdiendo 2 ejercito(s)
+Alba no ha conseguido ganar, ha perdido el territorio de TRLO y 2 ejercito(s)
+########################################################################################################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DAM T(2) [TRLO T(2), MAPU D(6)]
+TRLO T(2) [ADFI D(6), ASIR L(3), DAM T(2)]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------------------------------------------------
+Alba       [6, 2, 2]          --> pierde 1 ejercito(s) de ASIR, quedan 2
+Aitor      [4, 2]             --> pierde 1 ejercito(s) de GVEC, quedan 4
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+Alba       [6, 5]             --> pierde 0 ejercito(s) de ASIR, quedan 2
+Aitor      [3, 3]             --> pierde 2 ejercito(s) de GVEC, quedan 2
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+Alba       [3, 3]             --> pierde 2 ejercito(s) de ASIR, quedan 0
+Aitor      [3, 3]             --> pierde 0 ejercito(s) de GVEC, quedan 2
+--------------------------------------------------------------------------------------------------------
+########################################################################################################
+Aitor ha conseguido ganar ASIR perdiendo 3 ejercito(s)
+Alba no ha conseguido ganar, ha perdido el territorio de ASIR y 3 ejercito(s)
+########################################################################################################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ASIR T(1) [GVEC T(1), COIN L(5), MAPU D(6), TRLO T(2)]
+GVEC T(1) [DAW T(7), ASIR T(1), ADFI D(6)]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------------------------------------------------
+Edu        [6, 3, 2]          --> pierde 1 ejercito(s) de ADFI, quedan 5
+Aitor      [6]                --> pierde 0 ejercito(s) de GVEC, quedan 1
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+Edu        [6, 5, 5]          --> pierde 0 ejercito(s) de ADFI, quedan 5
+Aitor      [1]                --> pierde 1 ejercito(s) de GVEC, quedan 0
+--------------------------------------------------------------------------------------------------------
+########################################################################################################
+Edu ha conseguido ganar GVEC perdiendo 1 ejercito(s)
+Aitor no ha conseguido ganar, ha perdido el territorio de GVEC y 1 ejercito(s)
+########################################################################################################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ADFI D(3) [GVEC D(2), TRLO T(2)]
+GVEC D(2) [DAW T(7), ASIR T(1), ADFI D(3)]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+********************************************************************************************************
+*                                        AND THE WINNER IS AITOR                                       *
+********************************************************************************************************
+
+MISIÓN SECRETA DE AITOR: Conquistar Informática y comunicaciones
+****************************************************
+1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente
+2. Mostrar los territorios ordenados por número de ejércitos
+3. Mostrar los territorios ordenados por nombre del propietario
+4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio
+0. Finalizar
+****************************************************
+Opción: 1
+
+(6) Conquistar 2 territorios de cada continente --> D
+(4) Conquistar Comercio y marketing -->
+(3) Conquistar [ADFI, ASIR, ASDI] -->
+(3) Conquistar Informática y comunicaciones --> T
+(2) Conquistar Administración y gestión --> L
+****************************************************
+1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente
+2. Mostrar los territorios ordenados por número de ejércitos
+3. Mostrar los territorios ordenados por nombre del propietario
+4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio
+0. Finalizar
+****************************************************
+Opción: 2
+
+7 --> DAW (T)
+6 --> MAPU (D)
+5 --> COIN (L)
+5 --> ASDI (L)
+3 --> ADFI (D)
+2 --> TRLO (T)
+2 --> GVEC (D)
+2 --> DAM (T)
+1 --> ASIR (T)
+****************************************************
+1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente
+2. Mostrar los territorios ordenados por número de ejércitos
+3. Mostrar los territorios ordenados por nombre del propietario
+4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio
+0. Finalizar
+****************************************************
+Opción: 3
+
+Aitor --> ASIR (Informática y comunicaciones)
+Aitor --> DAM (Informática y comunicaciones)
+Aitor --> DAW (Informática y comunicaciones)
+Aitor --> TRLO (Comercio y marketing)
+Alba --> ASDI (Administración y gestión)
+Alba --> COIN (Comercio y marketing)
+Edu --> ADFI (Administración y gestión)
+Edu --> GVEC (Comercio y marketing)
+Edu --> MAPU (Comercio y marketing)
+****************************************************
+1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente
+2. Mostrar los territorios ordenados por número de ejércitos
+3. Mostrar los territorios ordenados por nombre del propietario
+4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio
+0. Finalizar
+****************************************************
+Opción: 4
+
+Administración y gestión
+	ADFI (Edu) 3
+	ASDI (Alba) 5
+Comercio y marketing
+	COIN (Alba) 5
+	GVEC (Edu) 2
+	MAPU (Edu) 6
+	TRLO (Aitor) 2
+Informática y comunicaciones
+	ASIR (Aitor) 1
+	DAM (Aitor) 2
+	DAW (Aitor) 7
+****************************************************
+1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente
+2. Mostrar los territorios ordenados por número de ejércitos
+3. Mostrar los territorios ordenados por nombre del propietario
+4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio
+0. Finalizar
+****************************************************
+Opción: 0

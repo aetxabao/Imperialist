@@ -430,4 +430,30 @@ public class Gui {
         System.out.println(sb.toString());
     }
 
+
+    public static int menuFin() {
+        int opc = -1;
+        System.out.println("*".repeat(LONG_TITULO/2));
+        System.out.println("1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente");
+        System.out.println("2. Mostrar los territorios ordenados por número de ejércitos");
+        System.out.println("3. Mostrar los territorios ordenados por nombre del propietario");
+        System.out.println("4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio");
+        System.out.println("0. Finalizar ");
+        System.out.println("*".repeat(LONG_TITULO/2));
+        System.out.print("Opción: ");
+        while(opc<0 || opc>4) {
+            try {
+                opc = Integer.parseInt(teclado.nextLine().trim());
+            }catch (Exception e) { }
+            System.out.println();
+        }
+        return opc;
+    }
+
+    public static void mostrar(List<String> datos) {
+        for (String dato : datos) {
+            System.out.println(dato);
+        }
+    }
+
 }

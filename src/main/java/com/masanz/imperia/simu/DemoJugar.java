@@ -33,6 +33,8 @@ public class DemoJugar {
         inicializar(juego);
 
         juego.jugar();
+
+        juego.fin();
     }
 
 }

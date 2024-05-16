@@ -1,0 +1,79 @@
+****************************************************
+1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente
+2. Mostrar los territorios ordenados por número de ejércitos
+3. Mostrar los territorios ordenados por nombre del propietario
+4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio
+0. Finalizar
+****************************************************
+Opción: 1
+
+(6) Conquistar 2 territorios de cada continente -->
+(4) Conquistar Comercio y marketing --> L
+(3) Conquistar Informática y comunicaciones -->
+(3) Conquistar [ADFI, ASIR, ASDI] --> D
+(2) Conquistar Administración y gestión --> T
+****************************************************
+1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente
+2. Mostrar los territorios ordenados por número de ejércitos
+3. Mostrar los territorios ordenados por nombre del propietario
+4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio
+0. Finalizar
+****************************************************
+Opción: 2
+
+8 --> TRLO (L)
+6 --> ASIR (L)
+3 --> GVEC (T)
+3 --> DAM (D)
+2 --> MAPU (T)
+2 --> ASDI (T)
+2 --> ADFI (T)
+1 --> DAW (T)
+1 --> COIN (T)
+****************************************************
+1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente
+2. Mostrar los territorios ordenados por número de ejércitos
+3. Mostrar los territorios ordenados por nombre del propietario
+4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio
+0. Finalizar
+****************************************************
+Opción: 3
+
+Aitor --> ADFI (Administración y gestión)
+Aitor --> ASDI (Administración y gestión)
+Aitor --> COIN (Comercio y marketing)
+Aitor --> DAW (Informática y comunicaciones)
+Aitor --> GVEC (Comercio y marketing)
+Aitor --> MAPU (Comercio y marketing)
+Alba --> ASIR (Informática y comunicaciones)
+Alba --> TRLO (Comercio y marketing)
+Edu --> DAM (Informática y comunicaciones)
+****************************************************
+1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente
+2. Mostrar los territorios ordenados por número de ejércitos
+3. Mostrar los territorios ordenados por nombre del propietario
+4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio
+0. Finalizar
+****************************************************
+Opción: 4
+
+Administración y gestión
+	ADFI (Aitor) 2
+	ASDI (Aitor) 2
+Comercio y marketing
+	COIN (Aitor) 1
+	GVEC (Aitor) 3
+	MAPU (Aitor) 2
+	TRLO (Alba) 8
+Informática y comunicaciones
+	ASIR (Alba) 6
+	DAM (Edu) 3
+	DAW (Aitor) 1
+****************************************************
+1. Mostrar misiones ordenadas por número de territorios a conquistar descendentemente
+2. Mostrar los territorios ordenados por número de ejércitos
+3. Mostrar los territorios ordenados por nombre del propietario
+4. Mostrar los territorios ordenados por nombre de continente y nombre de territorio
+0. Finalizar
+****************************************************
+Opción: 0

@@ -3,12 +3,11 @@ package com.masanz.imperia.modelo;
 import com.masanz.imperia.consts.Ctes;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Clase que representa el mapa de juego que consta de territorios de diferentes continentes.
+ * @author TODO PON AQUÍ TU NOMBRE
  */
 public class Mundo {
 
@@ -178,6 +177,42 @@ public class Mundo {
 
     // endregion
 
+    // region Continentes
+
+    public static List<String> getListaNombresContinentes() {
+        return new ArrayList<>(mapaContinentes.keySet());
+    }
+
+    public static List<Territorio> getListaTerritorios(String nombreContinente) {
+        return mapaContinentes.get(nombreContinente);
+    }
+
+    public static int getNumeroTerritoriosContinente(String nombreContinente) {
+        return mapaContinentes.get(nombreContinente).size();
+    }
+
+    public static int getNumeroTerritoriosContinenteDelJugador(String nombreContinente, String idJugador) {
+        int n = 0;
+        List<Territorio> listaTerritorios =  mapaContinentes.get(nombreContinente);
+        for (Territorio territorio : listaTerritorios) {
+            if (territorio.getJugador().getId().equals(idJugador)) {
+                n++;
+            }
+        }
+        return n;
+    }
+
+    public static String getContinente(Territorio territorio) {
+        for (Map.Entry<String, List<Territorio>> entry : mapaContinentes.entrySet()) {
+            if (entry.getValue().contains(territorio)) {
+                return entry.getKey();
+            }
+        }
+        return null;
+    }
+
+    // endregion
+
     // region Misiones
 
     public static boolean esContinenteDe(String nombreContinente, String idJugador) {
@@ -210,6 +245,30 @@ public class Mundo {
         return n >= 18;
     }
     // endregion
+
+    // region Listados
+    public static List<String> getTerritoriosPorNumeroDeEjercitos() {
+        // TODO: Parte 2, listado 2, getTerritoriosPorNumeroDeEjercitos
+        List<String> result = new ArrayList<>();
+
+        return result;
+    }
+
+    public static List<String> getTerritoriosPorNombrePropietario() {
+        // TODO: Parte 2, listado 3, getTerritoriosPorNombrePropietario
+        List<String> result = new ArrayList<>();
+
+        return result;
+    }
+
+    public static List<String> getTerritoriosPorContinente() {
+        // TODO: Parte 2, listado 4, getTerritoriosPorContinente
+        List<String> result = new ArrayList<>();
+
+        return result;
+    }
+    // endregion
+
 
 //    public static void main(String[] args) {
 //        MapaTerritorios.loadWorld();

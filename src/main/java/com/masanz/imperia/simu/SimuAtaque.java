@@ -13,6 +13,8 @@ public class SimuAtaque extends DemoJugar {
         inicializar(juego);
 
         juego.jugar();
+
+        juego.fin();
     }
 
 }

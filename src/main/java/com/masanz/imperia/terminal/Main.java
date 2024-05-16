@@ -11,6 +11,8 @@ public class Main {
         juego.colocarEjercitos();
 
         juego.jugar();
+
+        juego.fin();
     }
 
 }

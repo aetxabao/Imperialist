@@ -1,0 +1,60 @@
+@startuml
+class MisionConquistarListaTerritorios {
+# List<String> listaTerritorios
++ <<Create>> MisionConquistarListaTerritorios(List<String>)
++ boolean estaCumplida()
++ int numeroTerritorios()
++ String toString()
+}
+
+
+class MisionConquistarContinente {
+# String continente
++ <<Create>> MisionConquistarContinente(String)
++ boolean estaCumplida()
++ int numeroTerritorios()
++ String toString()
+}
+
+
+class GestorMisiones {
+- {static} Mazo<Mision> mazoMisiones
+- {static} Map<Jugador,Mision> mapaJugadoresMisiones
++ {static} void cargarMisiones(List<Jugador>)
++ {static} void repartirMisiones()
++ {static} boolean cumpleMision(Jugador)
++ {static} String getDescripcionMision(Jugador)
++ {static} List<String> getMisiones()
++ {static} void main(String[])
+}
+
+
+class MisionConquistarNTerritoriosDeCadaContinente {
+# int n
++ <<Create>> MisionConquistarNTerritoriosDeCadaContinente(int)
++ boolean estaCumplida()
++ int numeroTerritorios()
++ String toString()
+}
+
+
+abstract class Mision {
+# String idJugador
++ String getIdJugador()
++ void setIdJugador(String)
++ {abstract}boolean estaCumplida()
++ {abstract}int numeroTerritorios()
++ int compareTo(Mision)
+}
+
+interface Comparable<T> {
++ int compareTo(T)
+}
+
+
+Mision <|-- MisionConquistarListaTerritorios
+Mision <|-- MisionConquistarContinente
+Mision <|-- MisionConquistarNTerritoriosDeCadaContinente
+Comparable <|.. Mision
+GestorMisiones *-left-> Mision
+@enduml
