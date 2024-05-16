@@ -250,21 +250,47 @@ public class Mundo {
     public static List<String> getTerritoriosPorNumeroDeEjercitos() {
         // TODO: Parte 2, listado 2, getTerritoriosPorNumeroDeEjercitos
         List<String> result = new ArrayList<>();
-
+        List<Territorio> listaTerritorios = new ArrayList<>(mapaTerritorios.values());
+        listaTerritorios.sort( (t1, t2) -> Integer.compare(t1.getEjercitos(), t2.getEjercitos()) );
+        Collections.reverse(listaTerritorios);
+        for (Territorio territorio : listaTerritorios) {
+            result.add( territorio.getEjercitos() +
+                    " --> " +
+                    territorio.getNombre() + " (" + territorio.getJugador().getId() + ")");
+        }
         return result;
     }
 
     public static List<String> getTerritoriosPorNombrePropietario() {
         // TODO: Parte 2, listado 3, getTerritoriosPorNombrePropietario
         List<String> result = new ArrayList<>();
-
+        List<Territorio> listaTerritorios = new ArrayList<>(mapaTerritorios.values());
+        listaTerritorios.sort( (t1, t2) -> t1.getJugador().getNombre().compareTo(t2.getJugador().getNombre()) );
+        for (Territorio territorio : listaTerritorios) {
+            result.add( territorio.getJugador().getNombre() +
+                    " --> " +
+                    territorio.getNombre() +
+                    " (" + Mundo.getContinente(territorio) + ")");
+        }
         return result;
     }
 
     public static List<String> getTerritoriosPorContinente() {
         // TODO: Parte 2, listado 4, getTerritoriosPorContinente
         List<String> result = new ArrayList<>();
-
+        List<String> listaContinentes = Mundo.getListaNombresContinentes();
+        listaContinentes.sort(String::compareTo);
+        for (String continente : listaContinentes) {
+            result.add(continente);
+            List<Territorio> listaTerritorios = Mundo.getListaTerritorios(continente);
+            listaTerritorios.sort( (t1,t2) -> t1.getNombre().compareTo(t2.getNombre()) );
+            for (Territorio territorio : listaTerritorios) {
+                result.add( "\t" +
+                            territorio.getNombre() +
+                            " (" + territorio.getJugador().getNombre() + ") " +
+                            territorio.getEjercitos());
+            }
+        }
         return result;
     }
     // endregion

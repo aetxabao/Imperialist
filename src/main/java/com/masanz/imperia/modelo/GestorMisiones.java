@@ -15,36 +15,35 @@ public class GestorMisiones {
     private static Map<Jugador, Mision> mapaJugadoresMisiones = new HashMap<>();
 
     public static void cargarMisiones(List<Jugador> listaJugadores) {
-//        mazoMisiones.meter(new MisionConquistarListaTerritorios(Arrays.asList("ADFI", "ASIR", "ASDI")));
-//        List<String> listaNombreContinentes = Mundo.getListaNombresContinentes();
-//        for (String continente : listaNombreContinentes) {
-//            mazoMisiones.meter(new MisionConquistarContinente(continente));
-//        }
-//        mazoMisiones.meter(new MisionConquistarNTerritoriosDeCadaContinente(2));
-//
-//        for (Jugador jugador : listaJugadores) {
-//            mapaJugadoresMisiones.put(jugador, null);
-//        }
+        mazoMisiones.meter(new MisionConquistarListaTerritorios(Arrays.asList("ADFI", "ASIR", "ASDI")));
+        List<String> listaNombreContinentes = Mundo.getListaNombresContinentes();
+        for (String continente : listaNombreContinentes) {
+            mazoMisiones.meter(new MisionConquistarContinente(continente));
+        }
+        mazoMisiones.meter(new MisionConquistarNTerritoriosDeCadaContinente(2));
+
+        for (Jugador jugador : listaJugadores) {
+            mapaJugadoresMisiones.put(jugador, null);
+        }
     }
 
     public static void repartirMisiones() {
-//        mazoMisiones.barajar();
-//        for (Jugador jugador : mapaJugadoresMisiones.keySet()) {
-//            Mision mision = mazoMisiones.sacar();
-//            mision.setIdJugador(jugador.getId());
-//            while (mision.estaCumplida()) {
-//                mazoMisiones.meter(mision);
-//                mision = mazoMisiones.sacar();
-//                mision.setIdJugador(jugador.getId());
-//            }
-//            mazoMisiones.meter(mision);
-//            mapaJugadoresMisiones.put(jugador, mision);
-//        }
+        mazoMisiones.barajar();
+        for (Jugador jugador : mapaJugadoresMisiones.keySet()) {
+            Mision mision = mazoMisiones.sacar();
+            mision.setIdJugador(jugador.getId());
+            while (mision.estaCumplida()) {
+                mazoMisiones.meter(mision);
+                mision = mazoMisiones.sacar();
+                mision.setIdJugador(jugador.getId());
+            }
+            mazoMisiones.meter(mision);
+            mapaJugadoresMisiones.put(jugador, mision);
+        }
     }
 
     public static boolean cumpleMision(Jugador jugador) {
-//        return mapaJugadoresMisiones.get(jugador).estaCumplida();
-        return false;
+        return mapaJugadoresMisiones.get(jugador).estaCumplida();
     }
 
     public static String getDescripcionMision(Jugador jugador) {
@@ -54,7 +53,12 @@ public class GestorMisiones {
     public static List<String> getMisiones() {
         // TODO: Parte 2, listado 1, getMisiones
         List<String> result = new ArrayList<>();
-
+        List<Mision> listaMisiones = mazoMisiones.mazo;
+        Collections.sort(listaMisiones, Collections.reverseOrder());
+        for (Mision mision : listaMisiones) {
+            result.add( "(" + mision.numeroTerritorios() + ") " + mision.toString() +
+                    " --> " +  mision.getIdJugador()) ;
+        }
         return result;
     }
 
